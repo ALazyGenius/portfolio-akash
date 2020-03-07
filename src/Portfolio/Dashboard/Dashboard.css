@@ -1,0 +1,16 @@
+body {
+    /* background-image: url("../../Images/background-dashboard.jpg"); */
+    background-color: #56b68a;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0 0 0;
+}
+
+.dashboard-image {
+    max-width: 20rem;
+    max-height: 15rem;
+}
