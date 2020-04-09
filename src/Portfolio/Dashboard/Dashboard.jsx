@@ -1,17 +1,40 @@
-import React, { Component } from "react";
-import '../../Images/background-dashboard.jpg'
-import './Dashboard.css';
+import React, { Component } from "../../../node_modules/react";
+import NavBar from "../nav-bar/nav-bar";
+import SideBar from "../side-bar/side-bar";
+import AboutMe from "../content/about-me/about-me";
+import "./Dashboard.css";
+
+import { SocialIcon } from "react-social-icons";
 
 class Dashboard extends Component {
   state = {};
   render() {
     return (
       <div className="dashboard-container container-fluid">
-          <div className="dashboard-header row">
-              <div className="col-lg-3 col-md-3 col-sm-4 img-center">
-                  <img className="dashboard-image" src={require("../../Images/lock.jpg")} alt=""/>
-              </div>
+        <div className="row dashboard-subcontainer">
+          {/* Navbar section begins */}
+          <div className="col-md-12">
+            <NavBar></NavBar>
           </div>
+          {/* Navbar Section Ends */}
+
+          {/* Main Section Starts */}
+          <div className="row body-container">
+            {/* Sidebar Section Begins */}
+            <div className="col-md-2 sidebar">
+              <SideBar></SideBar>
+            </div>
+            {/* Sidebar Section Ends */}
+            {/* Content Section Begins */}
+            <div className="col-md-10 offset-md-2 about-me">
+              {/* About Me Section Begins */}
+              <AboutMe></AboutMe>
+              {/* About Me Section Ends */}
+            </div>
+            {/* Content Section Ends */}
+          </div>
+          {/* Main Section Ends */}
+        </div>
       </div>
     );
   }
