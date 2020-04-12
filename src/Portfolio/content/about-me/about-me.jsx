@@ -17,7 +17,7 @@ class AboutMe extends Component {
           </div>
           <div className="subheading">
             <p class="lead font-weight-normal address">
-              C-1003 Tinsel Town&nbsp;·&nbsp;·&nbsp;Pune&nbsp;·&nbsp;MH-411057
+              Consultant&nbsp;·&nbsp;Deloitte&nbsp;·&nbsp;
               ·&nbsp;
             </p>
             <p class="lead font-weight-normal phone-number">
