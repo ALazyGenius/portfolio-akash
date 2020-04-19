@@ -1,7 +1,7 @@
 import React, { Component } from "../../../node_modules/react";
 import NavBar from "../nav-bar/nav-bar";
 import SideBar from "../side-bar/side-bar";
-import Content from "../content/content"; 
+import Content from "../content/content";
 import "./Dashboard.css";
 
 class Dashboard extends Component {

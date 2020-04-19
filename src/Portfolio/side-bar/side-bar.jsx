@@ -28,44 +28,54 @@ class SideBar extends Component {
           <img className="sidebar-pic" src={ProfilePic} alt="" />
         </div>
         <div className="sidebar-sticky">
-          <ul className="nav flex-column">
-            <li className="nav-item">
-              <a className="nav-link" href="#about">
-                <span className="nav-item-icon">{aboutIcon}</span>
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#experience">
-                <span className="nav-item-icon">{expIcon}</span>
-                Experience
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/education">
-                <span className="nav-item-icon">{eduIcon}</span>
-                Education
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#skills">
-                <span className="nav-item-icon">{skillIcon}</span>
-                Skills
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#interests">
-                <span className="nav-item-icon">{interestIcon}</span>
-                Interests
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#awards">
-                <span className="nav-item-icon">{awardIcon}</span>
-                Awards
-              </a>
-            </li>
-          </ul>
+          <div className="sub-section-container">
+            <ul className="nav flex-column">
+            <li className="nav-item"><span className="nav-link nav-item-icon">{aboutIcon}</span></li>
+            <li className="nav-item"><span className="nav-link nav-item-icon">{expIcon}</span></li>
+            <li className="nav-item"><span className="nav-link nav-item-icon">{eduIcon}</span></li>
+            <li className="nav-item"><span className="nav-link nav-item-icon">{skillIcon}</span></li>
+            <li className="nav-item"><span className="nav-link nav-item-icon">{interestIcon}</span></li>
+            <li className="nav-item"><span className="nav-link nav-item-icon">{awardIcon}</span></li>
+            </ul>
+            <ul className="nav flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#about">
+                  {/* <span className="nav-item-icon">{aboutIcon}</span> */}
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#experience">
+                  {/* <span className="nav-item-icon">{expIcon}</span> */}
+                  Experience
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/education">
+                  {/* <span className="nav-item-icon">{eduIcon}</span> */}
+                  Education
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#skills">
+                  {/* <span className="nav-item-icon">{skillIcon}</span> */}
+                  Skills
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#interests">
+                  {/* <span className="nav-item-icon">{interestIcon}</span> */}
+                  Interests
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#awards">
+                  {/* <span className="nav-item-icon">{awardIcon}</span> */}
+                  Awards
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     );

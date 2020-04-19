@@ -4,6 +4,7 @@ import Experience from "./experience/experience";
 import Education from "./education/education";
 import Skills from "./skills/skills";
 import Interests from "./interests/interests";
+import Awards from "./awards/awards";
 import "./content.css";
 
 class Content extends Component {
@@ -20,6 +21,8 @@ class Content extends Component {
         <Skills></Skills>
         <hr/>
         <Interests></Interests>
+        <hr/>
+        <Awards></Awards>
         <hr/>
       </div>
     );

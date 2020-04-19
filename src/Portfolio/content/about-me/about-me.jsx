@@ -15,10 +15,9 @@ class AboutMe extends Component {
               <span className="text-primary header-sur-name">Mishra</span>
             </h1>
           </div>
-          <div className="subheading">
+          <div className="subheading-me">
             <p className="lead font-weight-normal address">
               Consultant&nbsp;·&nbsp;Deloitte&nbsp;·&nbsp;
-              ·&nbsp;
             </p>
             <p className="lead font-weight-normal phone-number">
               8585952877&nbsp;·&nbsp;
