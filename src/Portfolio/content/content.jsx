@@ -3,6 +3,7 @@ import AboutMe from "./about-me/about-me";
 import Experience from "./experience/experience";
 import Education from "./education/education";
 import Skills from "./skills/skills";
+import Interests from "./interests/interests";
 import "./content.css";
 
 class Content extends Component {
@@ -17,6 +18,8 @@ class Content extends Component {
         <Education></Education>
         <hr/>
         <Skills></Skills>
+        <hr/>
+        <Interests></Interests>
         <hr/>
       </div>
     );

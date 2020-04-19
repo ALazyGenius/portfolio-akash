@@ -8,19 +8,19 @@ class AboutMe extends Component {
   render() {
     return (
       <section className="col-lg-12 col-md-12 d-none d-md-block about-me-container">
-        <div class="mx-auto about-me-personal-data">
+        <div className="mx-auto about-me-personal-data">
           <div className="header-first-name">
-            <h1 class="mb-0">
+            <h1 className="mb-0">
               Akash
-              <span class="text-primary header-sur-name">Mishra</span>
+              <span className="text-primary header-sur-name">Mishra</span>
             </h1>
           </div>
           <div className="subheading">
-            <p class="lead font-weight-normal address">
+            <p className="lead font-weight-normal address">
               Consultant&nbsp;·&nbsp;Deloitte&nbsp;·&nbsp;
               ·&nbsp;
             </p>
-            <p class="lead font-weight-normal phone-number">
+            <p className="lead font-weight-normal phone-number">
               8585952877&nbsp;·&nbsp;
             </p>
             <a
@@ -31,8 +31,8 @@ class AboutMe extends Component {
             </a>
           </div>
         </div>
-        <div class="about-me-exp-data">
-          <p class="lead mb-5">
+        <div className="about-me-exp-data">
+          <p className="lead mb-5">
             Senior UI Developer with a focus on cross-platform strategy,
             interaction and mobility. I am passionate about good design and
             intuitive user experience.I am experienced in leveraging agile
@@ -41,19 +41,19 @@ class AboutMe extends Component {
             thinking to further the overall value proposition.
           </p>
         </div>
-        <div class="social-icons">
-          <a href="https://linkedin.com/akashmishra11/">
+        <div className="social-icons">
+          <span>
             <SocialIcon url="https://linkedin.com/akashmishra11/" />
-          </a>
-          <a href="https://github.com/ALazyGenius">
+          </span>
+          <span>
             <SocialIcon url="https://github.com/ALazyGenius" />
-          </a>
-          <a href="https://twitter.com/AkashMi19221903">
+          </span>
+          <span>
             <SocialIcon url="https://twitter.com/AkashMi19221903" />
-          </a>
-          <a href="https://www.facebook.com/akash.mishra.733">
+          </span>
+          <span>
             <SocialIcon url="https://www.facebook.com/akash.mishra.733" />
-          </a>
+          </span>
         </div>
       </section>
     );

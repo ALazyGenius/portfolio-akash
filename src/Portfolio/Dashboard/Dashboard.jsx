@@ -4,8 +4,6 @@ import SideBar from "../side-bar/side-bar";
 import Content from "../content/content"; 
 import "./Dashboard.css";
 
-import { SocialIcon } from "react-social-icons";
-
 class Dashboard extends Component {
   state = {};
   render() {

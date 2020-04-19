@@ -29,7 +29,7 @@ h3 {
   font-size: 2rem;
 }
 
-a {
+a, .social-icons span {
   color: #bd5d38;
 }
 
@@ -40,7 +40,10 @@ p.lead {
 
 a:hover,
 a:focus,
-a:active {
+a:active,
+.social-icons span:hover,
+.social-icons span:focus,
+.social-icons span:active {
   color: #824027;
 }
 
@@ -68,7 +71,7 @@ a:active {
   letter-spacing: -1px;
 }
 
-.social-icons a {
+.social-icons span {
   display: inline-block;
   height: 3.5rem;
   width: 3.5rem;
@@ -79,7 +82,7 @@ a:active {
   padding-right: 1rem;
 }
 
-.social-icons a:last-child {
+.social-icons span:last-child {
   margin-right: 0;
 }
 

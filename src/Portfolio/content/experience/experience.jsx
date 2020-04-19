@@ -6,12 +6,12 @@ class Experience extends Component {
   render() {
     return (
       <section className="col-lg-12 col-md-12 d-none d-md-block experience-container">
-        <div class="row experience-subcontainer">
-          <h2 class="mb-5">Experience</h2>
-          <div class="row individual-container">
-            <div class="col-md-9 resume-content">
-              <h3 class="mb-0">Senior Web Developer</h3>
-              <div class="subheading mb-3">Deloitte Ltd.</div>
+        <div className="row experience-subcontainer">
+          <h2 className="mb-5">Experience</h2>
+          <div className="row individual-container">
+            <div className="col-md-9 resume-content">
+              <h3 className="mb-0">Senior Web Developer</h3>
+              <div className="subheading mb-3">Deloitte Ltd.</div>
               <p>
                 Worked on complete redesign of multiple portals’ for the largest
                 provider of insurance in US, the side of the application, which
@@ -21,14 +21,14 @@ class Experience extends Component {
                 control with NGXS, style pre-processor was SCSS.
               </p>
             </div>
-            <div class="col-md-3 resume-date text-md-right">
-              <span class="text-primary">Mar 2020 - Present</span>
+            <div className="col-md-3 resume-date text-md-right">
+              <span className="text-primary">Mar 2020 - Present</span>
             </div>
           </div>
-          <div class="row individual-container">
-            <div class="col-md-9 resume-content">
-              <h3 class="mb-0">Senior Front End Developer</h3>
-              <div class="subheading mb-3">Mindtree</div>
+          <div className="row individual-container">
+            <div className="col-md-9 resume-content">
+              <h3 className="mb-0">Senior Front End Developer</h3>
+              <div className="subheading mb-3">Mindtree</div>
               <p>
                 Worked on complete redesign of multiple portals’ for the largest
                 provider of insurance in US, the side of the application, which
@@ -38,14 +38,14 @@ class Experience extends Component {
                 control with NGXS, style pre-processor was SCSS.
               </p>
             </div>
-            <div class="col-md-3 resume-date text-md-right">
-              <span class="text-primary">Mar 2019 - Mar 2020</span>
+            <div className="col-md-3 resume-date text-md-right">
+              <span className="text-primary">Mar 2019 - Mar 2020</span>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-9 resume-content">
-              <h3 class="mb-0">Front End Developer</h3>
-              <div class="subheading mb-3">Infosys Ltd.</div>
+          <div className="row">
+            <div className="col-md-9 resume-content">
+              <h3 className="mb-0">Front End Developer</h3>
+              <div className="subheading mb-3">Infosys Ltd.</div>
               <p>
                 Worked on complete redesign of multiple clients’ website portals
                 and apps in the banking and financial services field, the side
@@ -56,8 +56,8 @@ class Experience extends Component {
                 frameworks.
               </p>
             </div>
-            <div class="col-md-3 resume-date text-md-right">
-              <span class="text-primary">Jan 2017 - Mar 2019</span>
+            <div className="col-md-3 resume-date text-md-right">
+              <span className="text-primary">Jan 2017 - Mar 2019</span>
             </div>
           </div>
         </div>

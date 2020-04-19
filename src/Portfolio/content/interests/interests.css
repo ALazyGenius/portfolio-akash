@@ -1,14 +1,10 @@
-.skills-container {
+.interests-container {
   padding: 5rem 0 3rem 3rem;
 }
 
-.skills-subcontainer {
+.interests-subcontainer {
   margin-right: 2rem;
   display: block;
-}
-
-.individual-container {
-  margin-bottom: 3rem;
 }
 
 p.lead {
@@ -23,7 +19,7 @@ p.lead {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
-  display: inline-flex;
+  display: block;
 }
 
 .header-first-name {
@@ -41,14 +37,10 @@ p.lead {
   text-transform: uppercase;
 }
 
-.nav-item-icon {
-  margin-right: 1rem;
-}
-
-.icon {
-  height: 3rem;
-}
-
 .margin-btm {
   margin-bottom: 2rem;
+}
+
+.interestes-table {
+  display: inline-flex;
 }
