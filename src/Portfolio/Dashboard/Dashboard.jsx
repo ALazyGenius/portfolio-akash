@@ -1,12 +1,11 @@
-import React, { Component } from "../../../node_modules/react";
+import React, { useState } from "../../../node_modules/react";
 import NavBar from "../nav-bar/nav-bar";
 import SideBar from "../side-bar/side-bar";
 import Content from "../content/content";
 import "./Dashboard.css";
 
-class Dashboard extends Component {
-  state = {};
-  render() {
+function Dashboard(props) {
+  // render() {
     return (
       <div className="dashboard-container container-fluid">
         <div className="row dashboard-subcontainer">
@@ -33,7 +32,7 @@ class Dashboard extends Component {
         </div>
       </div>
     );
-  }
+  // }
 }
 
 export default Dashboard;

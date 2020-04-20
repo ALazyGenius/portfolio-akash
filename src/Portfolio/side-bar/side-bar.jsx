@@ -1,4 +1,6 @@
-import React, { Component } from "../../../node_modules/react";
+import React, { useState } from "../../../node_modules/react";
+import ReactGa from "react-ga";
+import ReactDOM from "react-dom";
 
 import "./side-bar.css";
 import ProfilePic from "../../Images/icon-programmer-14.jpg";
@@ -19,79 +21,110 @@ const awardIcon = <FontAwesomeIcon icon={faAward} />;
 const interestIcon = <FontAwesomeIcon icon={faGamepad} />;
 const skillIcon = <FontAwesomeIcon icon={faCode} />;
 
-class SideBar extends Component {
-  state = {};
-
+function SideBar(props) {
   // Delegated click handler
-  registerRoute = (event) => {
-    event.preventDefault();
+  const registerRoute = (event) => {
+    //To prevent bubbling
+    event.stopPropagation();
+
+    //Sends info to google analytics when user clicks on links
+    ReactGa.event({
+      category: "Link",
+      action: `Navigate user to section`,
+    });
+
+    scrollToElement(window.location.hash.slice(1));
+
+    // switch(window.location.hash) {
+    //   case "#about":
+    //     break;
+    //   case "#experience":
+    //     break;
+    //   case "#education":
+    //     break;
+    //   case "#skills":
+    //     break;
+    //   case "#interests":
+    //     break;
+    //   case "#awards":
+    //     break;
+    //   default:
+    //     break
+    // }
   };
 
-  render() {
-    return (
-      <section className="col-lg-2 col-md-2 d-none d-md-block bg-light sidebar">
-        <div className="sidebar-image-container">
-          <img className="sidebar-pic" src={ProfilePic} alt="" />
+  const scrollToElement = (section) => {
+    const node = ReactDOM.findDOMNode("root");
+    console.log(node);
+    if (node instanceof HTMLElement) {
+      const element = node.querySelector("#about");
+      console.log("element", element);
+    }
+  };
+
+  return (
+    <section className="col-lg-2 col-md-2 d-none d-md-block bg-light sidebar">
+      <div className="sidebar-image-container">
+        <img className="sidebar-pic" src={ProfilePic} alt="" />
+      </div>
+      <div className="sidebar-sticky">
+        <div className="sub-section-container">
+          <ul className="nav flex-column">
+            <li className="nav-item">
+              <span className="nav-link nav-item-icon">{aboutIcon}</span>
+            </li>
+            <li className="nav-item">
+              <span className="nav-link nav-item-icon">{expIcon}</span>
+            </li>
+            <li className="nav-item">
+              <span className="nav-link nav-item-icon">{eduIcon}</span>
+            </li>
+            <li className="nav-item">
+              <span className="nav-link nav-item-icon">{skillIcon}</span>
+            </li>
+            <li className="nav-item">
+              <span className="nav-link nav-item-icon">{interestIcon}</span>
+            </li>
+            <li className="nav-item">
+              <span className="nav-link nav-item-icon">{awardIcon}</span>
+            </li>
+          </ul>
+          <ul className="nav flex-column" onClick={registerRoute}>
+            <li className="nav-item">
+              <a className="nav-link" href="#about">
+                About
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#experience">
+                Experience
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#education">
+                Education
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#skills">
+                Skills
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#interests">
+                Interests
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#awards">
+                Awards
+              </a>
+            </li>
+          </ul>
         </div>
-        <div className="sidebar-sticky">
-          <div className="sub-section-container">
-            <ul className="nav flex-column">
-              <li className="nav-item">
-                <span className="nav-link nav-item-icon">{aboutIcon}</span>
-              </li>
-              <li className="nav-item">
-                <span className="nav-link nav-item-icon">{expIcon}</span>
-              </li>
-              <li className="nav-item">
-                <span className="nav-link nav-item-icon">{eduIcon}</span>
-              </li>
-              <li className="nav-item">
-                <span className="nav-link nav-item-icon">{skillIcon}</span>
-              </li>
-              <li className="nav-item">
-                <span className="nav-link nav-item-icon">{interestIcon}</span>
-              </li>
-              <li className="nav-item">
-                <span className="nav-link nav-item-icon">{awardIcon}</span>
-              </li>
-            </ul>
-            <ul className="nav flex-column" onClick={this.registerRoute}>
-              <li className="nav-item">
-                <a className="nav-link" href="/about">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/experience">
-                  Experience
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/education">
-                  Education
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/skills">
-                  Skills
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/interests">
-                  Interests
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/awards">
-                  Awards
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
 }
 
 export default SideBar;

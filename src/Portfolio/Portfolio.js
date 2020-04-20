@@ -8,8 +8,9 @@ function Portfolio() {
 
   useEffect(() => {
     ReactGa.initialize("UA-164036913-1");
+
     //To Report Page Views
-    ReactGa.pageview("/");
+    ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (
