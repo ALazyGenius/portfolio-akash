@@ -1,6 +1,6 @@
 import React, { Component } from "../../../node_modules/react";
-import "./side-bar.css";
 
+import "./side-bar.css";
 import ProfilePic from "../../Images/icon-programmer-14.jpg";
 
 import { FontAwesomeIcon } from "../../../node_modules/@fortawesome/react-fontawesome";
@@ -21,6 +21,12 @@ const skillIcon = <FontAwesomeIcon icon={faCode} />;
 
 class SideBar extends Component {
   state = {};
+
+  // Delegated click handler
+  registerRoute = (event) => {
+    event.preventDefault();
+  };
+
   render() {
     return (
       <section className="col-lg-2 col-md-2 d-none d-md-block bg-light sidebar">
@@ -30,47 +36,53 @@ class SideBar extends Component {
         <div className="sidebar-sticky">
           <div className="sub-section-container">
             <ul className="nav flex-column">
-            <li className="nav-item"><span className="nav-link nav-item-icon">{aboutIcon}</span></li>
-            <li className="nav-item"><span className="nav-link nav-item-icon">{expIcon}</span></li>
-            <li className="nav-item"><span className="nav-link nav-item-icon">{eduIcon}</span></li>
-            <li className="nav-item"><span className="nav-link nav-item-icon">{skillIcon}</span></li>
-            <li className="nav-item"><span className="nav-link nav-item-icon">{interestIcon}</span></li>
-            <li className="nav-item"><span className="nav-link nav-item-icon">{awardIcon}</span></li>
-            </ul>
-            <ul className="nav flex-column">
               <li className="nav-item">
-                <a className="nav-link" href="#about">
-                  {/* <span className="nav-item-icon">{aboutIcon}</span> */}
+                <span className="nav-link nav-item-icon">{aboutIcon}</span>
+              </li>
+              <li className="nav-item">
+                <span className="nav-link nav-item-icon">{expIcon}</span>
+              </li>
+              <li className="nav-item">
+                <span className="nav-link nav-item-icon">{eduIcon}</span>
+              </li>
+              <li className="nav-item">
+                <span className="nav-link nav-item-icon">{skillIcon}</span>
+              </li>
+              <li className="nav-item">
+                <span className="nav-link nav-item-icon">{interestIcon}</span>
+              </li>
+              <li className="nav-item">
+                <span className="nav-link nav-item-icon">{awardIcon}</span>
+              </li>
+            </ul>
+            <ul className="nav flex-column" onClick={this.registerRoute}>
+              <li className="nav-item">
+                <a className="nav-link" href="/about">
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#experience">
-                  {/* <span className="nav-item-icon">{expIcon}</span> */}
+                <a className="nav-link" href="/experience">
                   Experience
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/education">
-                  {/* <span className="nav-item-icon">{eduIcon}</span> */}
                   Education
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#skills">
-                  {/* <span className="nav-item-icon">{skillIcon}</span> */}
+                <a className="nav-link" href="/skills">
                   Skills
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#interests">
-                  {/* <span className="nav-item-icon">{interestIcon}</span> */}
+                <a className="nav-link" href="/interests">
                   Interests
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#awards">
-                  {/* <span className="nav-item-icon">{awardIcon}</span> */}
+                <a className="nav-link" href="/awards">
                   Awards
                 </a>
               </li>

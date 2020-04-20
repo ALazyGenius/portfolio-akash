@@ -14,7 +14,7 @@ class Content extends Component {
       <div className="dashboard-container container-fluid">
         <AboutMe></AboutMe>
         <hr/>
-        <Experience></Experience>
+        <Experience id="experience"></Experience>
         <hr/>
         <Education></Education>
         <hr/>

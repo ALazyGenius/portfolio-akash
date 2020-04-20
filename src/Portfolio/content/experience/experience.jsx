@@ -11,7 +11,7 @@ class Experience extends Component {
           <div className="row individual-container">
             <div className="col-md-9 resume-content">
               <h3 className="mb-0">Senior Web Developer</h3>
-              <div className="subheading mb-3">Deloitte Ltd.</div>
+              <div className="subheading mb-3">Deloitte.</div>
               <p>
                 Worked on complete redesign of multiple portals’ for the largest
                 provider of insurance in US, the side of the application, which
@@ -28,7 +28,7 @@ class Experience extends Component {
           <div className="row individual-container">
             <div className="col-md-9 resume-content">
               <h3 className="mb-0">Senior Front End Developer</h3>
-              <div className="subheading mb-3">Mindtree</div>
+              <div className="subheading mb-3">Mindtree Ltd.</div>
               <p>
                 Worked on complete redesign of multiple portals’ for the largest
                 provider of insurance in US, the side of the application, which
