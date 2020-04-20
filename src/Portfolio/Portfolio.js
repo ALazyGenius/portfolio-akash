@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import  React, {useEffect}  from 'react';
 import ReactGa from "react-ga";
 
 import './Portfolio.css';
@@ -8,10 +8,9 @@ function Portfolio() {
 
   useEffect(() => {
     ReactGa.initialize("UA-164036913-1");
-
     //To Report Page Views
     ReactGa.pageview("/");
-  }, [])
+  }, []);
 
   return (
     <div className="portfolio container-fluid">
