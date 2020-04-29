@@ -9,12 +9,10 @@ import Awards from "./awards/awards";
 import "./content.css";
 
 const Content = (props) => {
-  console.log("Props content", props);
 
   const { section } = props;
 
   const scrollIntoView = (id) => {
-    console.log(id);
     const sectionToScroll = document.getElementById(id);
     sectionToScroll.scrollIntoView({
       behavior: "smooth",
@@ -22,7 +20,6 @@ const Content = (props) => {
   };
 
   useEffect(() => {
-    console.log("updated props", props);
     if (props.section) {
       scrollIntoView(section);
     }

@@ -58,6 +58,7 @@
   }
   .sidebar .active {
     color: #bd5d38;
+    pointer-events: none;
   }
   
   .sidebar-heading {

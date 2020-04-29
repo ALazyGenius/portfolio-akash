@@ -21,11 +21,22 @@ const interestIcon = <FontAwesomeIcon icon={faGamepad} />;
 const skillIcon = <FontAwesomeIcon icon={faCode} />;
 
 const SideBar = props => {
+
   // Delegated click handler
   const registerRoute = (event) => {
     //To prevent bubbling
     event.stopPropagation();
     setTimeout(linkNav, 50);
+  }
+
+  const setStyle = () => {
+    const navList =  document.querySelectorAll("a.nav-link");
+    navList.forEach(navEl => {
+      navEl.classList.remove("active");
+      if(navEl.getAttribute('href') === window.location.hash) {
+        navEl.classList.add("active");
+      }
+    })
   }
 
   const linkNav = () => {
@@ -35,10 +46,10 @@ const SideBar = props => {
       action: `Navigate user to section ${window.location.hash.slice(1, -1)}`,
     });
     scrollToElement(window.location.hash.slice(1, -1));
+    setStyle();
   };
 
   const scrollToElement = (section) => {
-    console.log("section sidebar", section)
     props.scrollCallback(section);
   };
 
@@ -69,7 +80,7 @@ const SideBar = props => {
               <span className="nav-link nav-item-icon">{awardIcon}</span>
             </li>
           </ul>
-          <ul className="nav flex-column" onClick={registerRoute}>
+          <ul className="nav flex-column" onClick={registerRoute} id="nav-list">
             <li className="nav-item">
               <a className="nav-link active" href="#about-me/">
                 About
