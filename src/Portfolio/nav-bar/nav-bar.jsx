@@ -1,7 +1,7 @@
-import React, { useState } from "../../../node_modules/react";
+import React, {  } from "../../../node_modules/react";
 import "./nav-bar.css";
 
-function NavBar() {
+const NavBar = () => {
   return (
     <section className="col-lg-12 col-md-12">
       <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">

@@ -1,7 +1,7 @@
-import React, { useState } from "../../../../node_modules/react";
+import React, {  } from "../../../../node_modules/react";
 import "./experience.css";
 
-function Experience() {
+const Experience = props => {
   return (
     <section className="col-lg-12 col-md-12 d-none d-md-block experience-container">
       <div className="row experience-subcontainer">

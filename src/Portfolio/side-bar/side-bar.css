@@ -49,8 +49,15 @@
     margin-right: 0;
   }
   
-  .sidebar .nav-link.active {
+  .sidebar .nav-link:active {
     color: #007bff;
+  }
+
+  .sidebar .nav-link:hover {
+    text-decoration: underline;
+  }
+  .sidebar .active {
+    color: #bd5d38;
   }
   
   .sidebar-heading {

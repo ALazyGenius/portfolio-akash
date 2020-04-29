@@ -1,4 +1,4 @@
-import React, { useState } from "../../../../node_modules/react";
+import React, {  } from "../../../../node_modules/react";
 import "./about-me.css";
 
 import { SocialIcon } from "react-social-icons";
