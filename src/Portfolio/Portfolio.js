@@ -4,7 +4,7 @@ import ReactGa from "react-ga";
 import './Portfolio.css';
 import Dashboard from './Dashboard/Dashboard'
 
-function Portfolio() {
+const Portfolio = () => {
 
   useEffect(() => {
     ReactGa.initialize("UA-164036913-1");

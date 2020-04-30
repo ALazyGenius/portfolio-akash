@@ -1,4 +1,4 @@
-import React, {  } from "../../../node_modules/react";
+import React, { useEffect } from "../../../node_modules/react";
 import ReactGa from "react-ga";
 
 import "./side-bar.css";
@@ -22,6 +22,8 @@ const skillIcon = <FontAwesomeIcon icon={faCode} />;
 
 const SideBar = props => {
 
+  const { sidebarEl } = props;
+
   // Delegated click handler
   const registerRoute = (event) => {
     //To prevent bubbling
@@ -29,11 +31,20 @@ const SideBar = props => {
     setTimeout(linkNav, 50);
   }
 
-  const setStyle = () => {
+  const setStyleOnCLick = () => {
     const navList =  document.querySelectorAll("a.nav-link");
     navList.forEach(navEl => {
       navEl.classList.remove("active");
       if(navEl.getAttribute('href') === window.location.hash) {
+        navEl.classList.add("active");
+      }
+    })
+  }
+  const setStyleOnScroll = (sidebarEl) => {
+    const navList =  document.querySelectorAll("a.nav-link");
+    navList.forEach(navEl => {
+      navEl.classList.remove("active");
+      if(navEl.getAttribute('href').slice(1,-1) === sidebarEl) {
         navEl.classList.add("active");
       }
     })
@@ -45,13 +56,19 @@ const SideBar = props => {
       category: "Link",
       action: `Navigate user to section ${window.location.hash.slice(1, -1)}`,
     });
+    setStyleOnCLick();
     scrollToElement(window.location.hash.slice(1, -1));
-    setStyle();
   };
 
   const scrollToElement = (section) => {
     props.scrollCallback(section);
   };
+
+  useEffect(() => {
+    if (sidebarEl) {
+      setStyleOnScroll(sidebarEl);
+    }
+  }, [sidebarEl]);
 
   return (
     <section className="col-lg-2 col-md-2 d-none d-md-block bg-light sidebar">

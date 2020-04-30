@@ -9,8 +9,26 @@ import Awards from "./awards/awards";
 import "./content.css";
 
 const Content = (props) => {
-
   const { section } = props;
+  let debounceTimer;
+
+  const onPageScroll = () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(onScrollEnd, 500);
+  };
+
+  const onScrollEnd = () => {
+    const elementArr = document.querySelectorAll(".section-blocks");
+    elementArr.forEach((el) => {
+      const bounding = el.getBoundingClientRect();
+      console.log(bounding.height);
+      if (
+        bounding.top < 150 && bounding.bottom > 150
+      ) {
+        props.styleSidebarOnManualScroll(el.getAttribute("id"));
+      }
+    });
+  };
 
   const scrollIntoView = (id) => {
     const sectionToScroll = document.getElementById(id);
@@ -19,35 +37,37 @@ const Content = (props) => {
     });
   };
 
+  window.addEventListener("scroll", onPageScroll);
+
   useEffect(() => {
-    if (props.section) {
+    if (section) {
       scrollIntoView(section);
     }
-  }, [props, section]);
+  }, [section]);
 
   return (
     <div className="dashboard-container container-fluid">
-      <div id="about-me">
+      <div className="section-blocks" id="about-me">
         <AboutMe></AboutMe>
         <hr />
       </div>
-      <div id="experience">
+      <div className="section-blocks" id="experience">
         <Experience></Experience>
         <hr />
       </div>
-      <div id="education">
+      <div className="section-blocks" id="education">
         <Education></Education>
         <hr />
       </div>
-      <div id="skills">
+      <div className="section-blocks" id="skills">
         <Skills></Skills>
         <hr />
       </div>
-      <div id="interests">
+      <div className="section-blocks" id="interests">
         <Interests></Interests>
         <hr />
       </div>
-      <div id="awards">
+      <div className="section-blocks" id="awards">
         <Awards></Awards>
         <hr />
       </div>

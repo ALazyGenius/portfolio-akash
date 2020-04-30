@@ -6,10 +6,17 @@ import "./Dashboard.css";
 
 const Dashboard = (props) => {
   const [section, setSection] = useState("");
+  const [sidebarEl, setSidebarEl] = useState("");
 
-  const scrollCallbackFunction = (childData) => {
+  const scrollCallbackFunction = childData => {
     setSection(childData);
   };
+
+  const onManualScroll = element => {
+    if(element) {
+      setSidebarEl(element);
+    }
+  }
 
   return (
     <div className="dashboard-container container-fluid">
@@ -24,12 +31,12 @@ const Dashboard = (props) => {
         <div className="row body-container">
           {/* Sidebar Section Begins */}
           <div className="col-md-2 sidebar">
-            <SideBar scrollCallback={scrollCallbackFunction}></SideBar>
+            <SideBar scrollCallback={scrollCallbackFunction} sidebarEl={sidebarEl}></SideBar>
           </div>
           {/* Sidebar Section Ends */}
           {/* Content Section Begins */}
           <div className="col-md-10 offset-md-2 about-me">
-            <Content section={section}></Content>
+            <Content section={section} styleSidebarOnManualScroll={onManualScroll}></Content>
           </div>
           {/* Content Section Ends */}
         </div>
