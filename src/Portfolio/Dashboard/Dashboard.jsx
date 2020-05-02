@@ -22,9 +22,9 @@ const Dashboard = (props) => {
     <div className="dashboard-container container-fluid">
       <div className="row dashboard-subcontainer">
         {/* Navbar section begins */}
-        <div className="col-md-12">
+        {/* <div className="col-md-12">
           <NavBar></NavBar>
-        </div>
+        </div> */}
         {/* Navbar Section Ends */}
 
         {/* Main Section Starts */}
