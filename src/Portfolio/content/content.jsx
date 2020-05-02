@@ -21,7 +21,6 @@ const Content = (props) => {
     const elementArr = document.querySelectorAll(".section-blocks");
     elementArr.forEach((el) => {
       const bounding = el.getBoundingClientRect();
-      console.log(bounding.height);
       if (
         bounding.top < 150 && bounding.bottom > 150
       ) {
