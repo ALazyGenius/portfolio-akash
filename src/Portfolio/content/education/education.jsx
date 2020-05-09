@@ -2,8 +2,9 @@ import React, {  } from "react";
 import "./education.css";
 
 function Education() {
+  
   return (
-    <section className="col-lg-12 col-md-12 d-none d-md-block education-container">
+    <section className="col-lg-12 col-md-12 d-md-block education-container">
       <div className="row education-subcontainer">
         <h2 className="mb-5">Education</h2>
         <div className="row individual-container">

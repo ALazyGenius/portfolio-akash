@@ -22,7 +22,7 @@ const checkIcon = <FontAwesomeIcon icon={faCheck} />;
 
 function Skills() {
   return (
-    <section className="col-lg-12 col-md-12 d-none d-md-block skills-container">
+    <section className="col-lg-12 col-md-12 d-md-block skills-container">
       <div className="row skills-subcontainer">
         <h2 className="mb-5">Skills</h2>
         <div className="subheading mb-3">Programming Languages &amp; Tools</div>

@@ -19,7 +19,7 @@ const foodIcon = <FontAwesomeIcon icon={faHamburger} />;
 
 function Interests() {
   return (
-    <section className="col-lg-12 col-md-12 d-none d-md-block interests-container">
+    <section className="col-lg-12 col-md-12 d-md-block interests-container">
       <div className="row interests-subcontainer">
         <h2 className="mb-5">Interests</h2>
         <div className="subheading mb-3">Extra-Curriculars:</div>

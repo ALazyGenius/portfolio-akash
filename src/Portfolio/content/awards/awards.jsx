@@ -7,7 +7,7 @@ const trophyIcon = <FontAwesomeIcon icon={faTrophy} />;
 
 function Awards() {
   return (
-    <section className="col-lg-12 col-md-12 d-none d-md-block awards-container">
+    <section className="col-lg-12 col-md-12 d-md-block awards-container">
       <div className="row awards-subcontainer">
         <h2 className="mb-5">Awards</h2>
         <div className="fa-ul margin-btm">

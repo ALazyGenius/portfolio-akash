@@ -5,7 +5,7 @@ import { SocialIcon } from "react-social-icons";
 
 function AboutMe() {
   return (
-    <section className="col-lg-12 col-md-12 d-none d-md-block about-me-container">
+    <section className="col-lg-12 col-md-12 d-md-block about-me-container">
       <div className="mx-auto about-me-personal-data">
         <div className="header-first-name">
           <h1 className="mb-0">
